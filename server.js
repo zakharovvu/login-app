@@ -25,7 +25,7 @@ function writeUsers() {
   });
 }
 
-
+app.use(express.static('build'));
 app.use(bodyParser.text())
 
 app.post('/users', function(req, res){

@@ -12,7 +12,7 @@ class Registration extends React.Component {
 
     if (this.state.name === '' || this.state.email === '') event.preventDefault()
     let user = {name: this.state.name, email: this.state.email}
-    fetch('http://localhost:3001', {method: "POST", body: JSON.stringify(user)})
+    fetch('http://localhost:3000/users', {method: "POST", body: JSON.stringify(user)})
       // .then(response => response.text())
       // .then(data => {
       //   this.setState({ status: '' })});

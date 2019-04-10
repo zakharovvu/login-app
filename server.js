@@ -28,14 +28,14 @@ function writeUsers() {
 
 app.use(bodyParser.text())
 
-app.post('/', function(req, res){
+app.post('/users', function(req, res){
   res.set('Access-Control-Allow-Origin', '*');
   allUsers.push(JSON.parse(req.body))
   writeUsers();
   res.json({stasus: 'ok'});
 });
 
-app.get('/', function(req, res){
+app.get('/users', function(req, res){
   res.set('Access-Control-Allow-Origin', '*');
   writeUsers();
   res.json(allUsers);

@@ -2,10 +2,14 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.get('/users', (req, res) => {
-  res.json([]);
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', 'http://127.0.0.1:3000')
+  next();
 });
 
+app.get('/api/users', (req, res) => {
+  res.json([1, 2, 3]);
+});
 
 app.use(express.static('build'));
 

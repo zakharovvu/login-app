@@ -7,7 +7,7 @@ class Listusers extends React.Component {
 
 
   getUsers = () => {
-    fetch('http://127.0.0.1:3000/users')
+    fetch('http://127.0.0.1/users')
     .then(response => response.text())
     .then(data => {
       console.log(data)

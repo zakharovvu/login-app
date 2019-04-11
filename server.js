@@ -8,7 +8,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/api/users', (req, res) => {
-  res.json([1, 2, 3]);
+  res.json([1, 2, 3, 4]);
 });
 
 app.use(express.static('build'));
